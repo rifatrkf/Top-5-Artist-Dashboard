@@ -1,0 +1,19 @@
+WITH
+t2 AS
+(SELECT artist, released_year, COUNT(song) as countt 
+FROM song_list2
+WHERE released_year BETWEEN {{Year_Start}} AND {{Year_End}}
+GROUP BY artist, released_year
+ORDER BY released_year, COUNT(song) DESC),
+
+t3 AS
+(SELECT t2.artist,  SUM(countt) as summ
+FROM t2
+GROUP BY artist
+ORDER BY summ DESC
+LIMIT 5)
+
+SELECT t2.artist AS "artist name", released_year, countt as "count" FROM t2
+RIGHT JOIN t3
+    ON t3.artist = t2.artist
+ORDER BY t3.summ DESC, released_year
