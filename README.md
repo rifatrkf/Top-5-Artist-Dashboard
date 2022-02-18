@@ -11,7 +11,9 @@ https://github.com/fivethirtyeight/data/blob/master/classic-rock/classic-rock-so
 
 ### Tools
 Python (pandas) - data extraction
+
 Postgresql - database engine
+
 Metabase - Data visualization (Dashboard)
 
 
