@@ -6,10 +6,10 @@
  
 ## Explanation 
 
-# Dataset
+### Dataset
 https://github.com/fivethirtyeight/data/blob/master/classic-rock/classic-rock-song-list.csv
 
-# Tools
+### Tools
 Python (pandas) - data extraction
 Postgresql - database engine
 Metabase - Data visualization (Dashboard)
@@ -61,7 +61,7 @@ Then we pivot the table with pivot column is released by the year and cell colum
 
 
 
-# Problem
+### Problem
 There is a problem with visualizing through a pivot table, the order of artists in the pivot table is often not the same as the order of artists in the total count of released songs in a selected year. For example:
 
 
